@@ -1,0 +1,12 @@
+class Turma {
+	int[] notas;
+}
+
+class TesteDaTurma {
+	public static void main(String[] args) {
+		int[] notas = new int[10];
+		
+		System.out.println(notas[1]);
+		
+	}
+}
