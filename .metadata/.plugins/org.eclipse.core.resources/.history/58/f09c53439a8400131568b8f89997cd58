@@ -27,9 +27,6 @@ class TesteDaTurma {
 		fj11.alunos[1].nome = "Marcelo";
 		fj11.alunos[1].nota = 5;
 		
-		fj11.alunos[2] = new Alunos();
-		fj11.alunos[2].nome = "Astésio José";
-		fj11.alunos[2].nota = 10;
 		
 //		System.out.println(fj11.notas[0]);
 		
