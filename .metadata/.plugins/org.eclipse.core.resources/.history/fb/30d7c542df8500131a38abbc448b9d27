@@ -1,0 +1,20 @@
+class Funcionario {
+	private String nome;
+	private double salario;
+	
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+	
+	public double getBonus(){
+		return this.salario * 0.2;
+	}
+}
+
+class TestaFuncionarios {
+	public static void main(String[] args) {
+		Funcionario joao = new Funcionario();
+			joao.setSalario(1000.00);
+		System.out.println(joao.getBonus());
+	}
+}

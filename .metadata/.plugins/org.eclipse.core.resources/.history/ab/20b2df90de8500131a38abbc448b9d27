@@ -1,0 +1,14 @@
+class Funcionario {
+	private String nome;
+	private double salario;
+	
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+}
+
+class TestaFuncionarios {
+	public static void main(String[] args) {
+		Funcionario joao = new Funcionario();
+	}
+}

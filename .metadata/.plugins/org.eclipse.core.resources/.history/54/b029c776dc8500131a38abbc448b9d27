@@ -1,0 +1,10 @@
+class Funcionario {
+	private String nome;
+	private double salario;
+}
+
+class TestaFuncionarios {
+	public static void main(String[] args) {
+		Funcionario joao = new Funcionario();
+	}
+}
