@@ -5,12 +5,6 @@ public abstract class Funcionario {
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
-
-	// obgrigando class filhas
+	
 	public abstract double getBonus();
-
-	public String getNome() {
-		return nome;
-	}
-
 }

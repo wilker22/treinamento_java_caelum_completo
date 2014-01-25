@@ -1,0 +1,11 @@
+public class TestaFuncionarios {
+	public static void main(String[] args) {
+		Funcionario joaquim = new Gerente();
+//		joaquim.cobraEntrega();
+		joaquim.setSalario(2000.00);
+		System.out.println(joaquim.getBonus());
+
+		TotalizadorDeBonus totalizador = new TotalizadorDeBonus();
+		totalizador.adciona(joaquim);
+	}
+}

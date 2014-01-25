@@ -1,0 +1,14 @@
+public class TestaFuncionarios {
+	public static void main(String[] args) {
+		//Polimorfismo
+//		Funcionario joaquim = new Gerente();
+//		joaquim.cobraEntrega();
+	
+		Gerente joaquim = new Gerente();
+		joaquim.setSalario(2000.00);
+		System.out.println(joaquim.getBonus());
+
+		TotalizadorDeBonus totalizador = new TotalizadorDeBonus();
+		totalizador.adciona(joaquim);
+	}
+}
