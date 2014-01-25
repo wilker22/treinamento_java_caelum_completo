@@ -1,0 +1,13 @@
+public class TestaConta {
+	public static void main(String[] args) {
+		Conta joao = new Conta();
+		
+		joao.deposita(50.0);
+		try {
+			joao.saca(300.0);			
+		} catch(RuntimeException e ){
+			System.out.println("Saldo Insuficiente");
+		}
+		System.out.println(joao.getSaldo());
+	}
+}

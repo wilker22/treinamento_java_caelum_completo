@@ -1,0 +1,8 @@
+public class SaldoInsuficienteException extends RuntimeException{
+	private final double saldoAtual;
+
+	public SaldoInsuficienteException(double saldoAtual) {
+		this.saldoAtual = saldoAtual;
+		super("Saldo insuficiente: " + saldoAtual);
+	}
+}

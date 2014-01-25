@@ -1,0 +1,6 @@
+public class TestaExcecao {
+	public static void main(String[] args) {
+		System.out.println("Inicio do programa");
+		System.out.println("Fim do programa");
+	}
+}
