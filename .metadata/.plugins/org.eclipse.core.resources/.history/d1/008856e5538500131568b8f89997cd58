@@ -1,0 +1,137 @@
+public class Conta {
+	private int numero;
+	private double saldo;
+	private double limite;
+	private int agencia;
+	private Cliente titular;
+	private static int totalDeContas = 0;
+	
+	public Conta(Cliente titular){
+		this.titular = titular;
+		totalDeContas++;
+		this.numero = totalDeContas;
+	}
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public double getLimite() {
+		return limite;
+	}
+
+	public void setLimite(double limite) {
+		this.limite = limite;
+	}
+
+	public int getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+
+	public Cliente getTitular() {
+		return titular;
+	}
+
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+	
+	public void deposita(double valorASerDepositado){
+		this.saldo += valorASerDepositado;
+	}
+	
+	public void saca(double valorASerSacado) {
+		if(this.saldo < valorASerSacado + this.limite){
+			System.out.println("Valor insuficiente");	
+		}
+		else {
+			this.saldo -= valorASerSacado;
+		}
+	}
+
+	// mudança dificil de se perceber proquer tiramos a conta origem
+	public void transfere(double valor, Conta destino) {
+		this.saldo -= valor;
+		destino.saldo += valor;
+	}
+
+}
+
+public class Clientes {
+	private String nome;
+	private String cpf;
+	private String dataNascimento;
+	
+}
+
+class Programa {
+	public static void main(String[] args) {
+
+		
+		
+		Conta mauricio = new Conta("Astesio");
+			mauricio.setNumero(123);
+			mauricio.setSaldo(800.0);
+			mauricio.setAgencia(842);
+			
+			mauricio.setTitular(new Cliente());
+			mauricio.setTitular("Mauricio Aniche");
+			mauricio.titular.cpf ="123456789";
+			mauricio.titular.dataNascimento = "09/05/1989";
+			
+			mauricio.deposita(1000);
+			mauricio.saca(1700.00);
+			
+			
+		Conta guilherme = new Conta();
+			guilherme.mudaNumero(456);
+			guilherme.mudaSaldo(1200.0);
+			
+			guilherme.deposita(800.0);
+			guilherme.saca(3000.0);
+			
+			mauricio.transfere(200, guilherme);
+			guilherme.transfere(400, mauricio);
+			
+			
+			System.out.println(mauricio.pegaSaldo());
+			System.out.println(guilherme.pegaSaldo());
+	}
+}
+
+class TestaConta{
+	public static void main(String[] args) {
+		Conta joao = new Conta();
+			joao.mudaNumero(123);
+			
+			Cliente dadosDoJoao = new Cliente();
+			dadosDoJoao.nome = "João da Silva";
+			joao.titular = dadosDoJoao;
+			joao.limite = 100.0;
+			
+			
+			joao.titular = dadosDoJoao; // vinculando as contas
+			
+			joao.deposita(200);
+			joao.saca(12200);
+			
+			
+			System.out.println(joao.pegaSaldo());
+			
+	}
+}

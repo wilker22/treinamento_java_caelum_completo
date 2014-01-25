@@ -1,0 +1,123 @@
+public class Conta {
+	private int numero;
+	private double saldo;
+	private double limite;
+	private int agencia;
+	private Cliente titular;
+	private static int totalDeContas = 0;
+	
+	public Conta(Cliente titular){
+		this.titular = titular;
+		totalDeContas++;
+		this.numero = totalDeContas;
+	}
+	public int getNumero() {
+		return numero;
+	}
+
+	public void setNumero(int numero) {
+		this.numero = numero;
+	}
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public double getLimite() {
+		return limite;
+	}
+
+	public void setLimite(double limite) {
+		this.limite = limite;
+	}
+
+	public int getAgencia() {
+		return agencia;
+	}
+
+	public void setAgencia(int agencia) {
+		this.agencia = agencia;
+	}
+
+	public Cliente getTitular() {
+		return titular;
+	}
+
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+	
+	public void deposita(double valorASerDepositado){
+		this.saldo += valorASerDepositado;
+	}
+	
+	public void saca(double valorASerSacado) {
+		if(this.saldo < valorASerSacado + this.limite){
+			System.out.println("Valor insuficiente");	
+		}
+		else {
+			this.saldo -= valorASerSacado;
+		}
+	}
+
+	// mudança dificil de se perceber proquer tiramos a conta origem
+	public void transfere(double valor, Conta destino) {
+		this.saldo -= valor;
+		destino.saldo += valor;
+	}
+
+}
+
+class Cliente {
+	private String nome;
+	private String cpf;
+	private String dataNascimento;
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getCpf() {
+		return cpf;
+	}
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}	
+	
+	
+}
+
+class Programa {
+	public static void main(String[] args) {
+		Cliente cliente = new Cliente();
+			cliente.setNome("Astésio José");
+			cliente.setCpf("09812309834");
+			cliente.setDataNascimento("09/05/1989");
+		
+		
+		Conta mauricio = new Conta(cliente);
+			mauricio.setNumero(123);
+			mauricio.setSaldo(800.0);
+			mauricio.setAgencia(842);
+			
+			mauricio.setTitular(cliente);
+			
+			mauricio.deposita(1000);
+			mauricio.saca(1700.00);
+}
+
+class TestaConta{
+	public static void main(String[] args) {			
+	}
+}
