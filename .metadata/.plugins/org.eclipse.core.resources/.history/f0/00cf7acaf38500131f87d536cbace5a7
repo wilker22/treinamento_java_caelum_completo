@@ -1,7 +1,8 @@
 public abstract class Funcionario {
 	private String nome;
 	protected double salario;
-	
+	private int senha;
+
 	public void setSalario(double salario) {
 		this.salario = salario;
 	}
@@ -13,6 +14,8 @@ public abstract class Funcionario {
 		return nome;
 	}
 
-	
+	public boolean autentica(int senha) {
+		return this.senha == senha;
+	}
 
 }
