@@ -1,0 +1,27 @@
+package br.com.caelum.fj11.programa;
+
+import br.com.caelum.fj11.modelo.Cliente;
+import br.com.caelum.fj11.modelo.Conta;
+import br.com.caelum.fj11.modelo.GuardadorDeObjetos;
+
+public class TestaJavaLang {
+	public static void main(String[] args) {
+		
+		Conta c1 = new Conta(500.00);
+		Conta c2 = new Conta(700.00);
+		
+		GuardadorDeObjetos amario = new GuardadorDeObjetos();
+			amario.adiciona(c1);
+			amario.adiciona(c2);
+		
+		Cliente joao = new Cliente();
+			amario.adiciona(joao);
+			
+		Conta c1NoArmario = (Conta) amario.pega(0);
+		Cliente joaoNoArmaro  = (Cliente) amario.pega(2);
+		
+		System.out.println(c1NoArmario.getSaldo());
+		System.out.println(joaoNoArmaro.toString());
+		
+	}
+}

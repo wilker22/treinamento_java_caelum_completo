@@ -12,7 +12,10 @@ public class Conta {
 		this.agencia = agencia;
 		this.saldo = saldo;
 	}
-
+	
+	public Conta(double saldo){	
+		this.saldo = saldo;
+	}
 	public String getNome() {
 		return nome;
 	}
@@ -56,5 +59,19 @@ public class Conta {
 		System.out.println(agencia);
 		System.out.println(saldo);
 	}
-
+	
+	@Override
+	public String toString() {
+		return "Conta com saldo " + saldo;
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if(!(obj instanceof Conta)) return false;
+		
+		Conta outra = (Conta) obj;
+		return outra.saldo == this.saldo;
+//		if(outra.saldo == this.saldo) return true;
+//		else return false;
+	}
 }

@@ -1,0 +1,10 @@
+package br.com.caelum.fj11.programa;
+
+import br.com.caelum.fj11.modelo.Conta;
+
+public class TestaJavaLang {
+	public static void main(String[] args) {
+		Conta c1 = new Conta(500.00);
+		Conta c2 = new Conta(700.00);
+	}
+}

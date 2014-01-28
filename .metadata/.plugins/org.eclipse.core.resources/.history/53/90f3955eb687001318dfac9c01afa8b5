@@ -1,0 +1,15 @@
+package br.com.caelum.fj11.modelo;
+
+public class GuardadorDeObjetos {
+	private Conta[] contas;
+	private int posicaoLivre;
+	
+	public void adiciona(Conta nova){
+		contas[posicaoLivre] = nova;
+		posicaoLivre++;
+	}
+	
+	public Conta pega(int posicao) {
+		return contas[posicao];
+	}
+}
