@@ -12,4 +12,9 @@
 <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
 <fullyQualifiedTypeName name="SaldoInsuficienteException"/>
 <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
+<fullyQualifiedTypeName name="br.com.caelum.fj11.modelo.GuardadorDeObjetos"/>
+<fullyQualifiedTypeName name="java.lang.Object"/>
+<fullyQualifiedTypeName name="br.com.caelum.fj11.modelo.Cliente"/>
+<fullyQualifiedTypeName name="br.com.caelum.fj11.modelo.Conta"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
 </qualifiedTypeNameHistroy>
