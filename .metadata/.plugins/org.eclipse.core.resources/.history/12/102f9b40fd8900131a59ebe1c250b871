@@ -1,0 +1,12 @@
+package br.com.caelum.fj11.programa;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class TestaColecoes1 {
+	public static void main(String[] args) {
+		List<String> nomes = new LinkedList<String>();
+		nomes.add("Astesio Jose");
+		nomes.add("Josoé");
+	}
+}

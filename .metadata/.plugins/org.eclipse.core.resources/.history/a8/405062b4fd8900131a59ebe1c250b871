@@ -1,0 +1,27 @@
+package br.com.caelum.fj11.programa;
+
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.List;
+
+public class TestaColecoes1 {
+	public static void main(String[] args) {
+		
+		// Permite add mesmo grupo repetidas vezes
+		List<String> nomes = new LinkedList<String>();
+		nomes.add("Astesio Jose");
+		nomes.add("Josoé");
+		nomes.add("Astesio Jose");
+		
+		System.out.println(nomes.get(0));
+		System.out.println(nomes.get(2));
+		
+		HashSet<String> nomesNaoRepetidos = new HashSet<String>();
+		nomes.add("Astesio");
+		nomes.add("João");
+		nomes.add("Astesio");
+		nomes.add("João");
+		
+		System.out.println(nomesNaoRepetidos.size());
+	}
+}

@@ -1,0 +1,29 @@
+package br.com.caelum.fj11.programa;
+
+import java.util.ArrayList;
+
+import br.com.caelum.fj11.modelo.Conta;
+
+public class TestaColecoes {
+	@SuppressWarnings("rawtypes")
+	public static void main(String[] args) {
+		ArrayList nomes = new ArrayList();
+		nomes.add("Mauricio");
+		nomes.add("Guilherme");
+		
+		System.out.println(nomes.get(0));
+		System.out.println(nomes.contains("Guilherme"));
+		
+		ArrayList contas = new ArrayList();
+		
+		Conta c1 = new Conta();
+		Conta c2 = new Conta();
+		
+		c1.deposita(500.0);
+		c2.deposita(500.0);
+		
+		contas.add(c1);
+		contas.add(c2);
+		
+	}
+}
