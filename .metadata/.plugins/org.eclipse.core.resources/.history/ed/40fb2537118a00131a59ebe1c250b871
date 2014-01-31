@@ -36,13 +36,10 @@ public class Conta implements Comparable<Conta> {
 		return saldo;
 	}
 
-//	public void deposita(double valorASerDepositado) {
-//		synchronized (this) {
-//			this.saldo += valorASerDepositado;			
-//		}
-//	}
-	public synchronized void deposita(double valorASerDepositado) {
-		this.saldo += valorASerDepositado;
+	public void deposita(double valorASerDepositado) {
+		synchronized (this) {
+			this.saldo += valorASerDepositado;			
+		}
 	}
 	/**
 	 * realiza um saque na conta dado um valor passado

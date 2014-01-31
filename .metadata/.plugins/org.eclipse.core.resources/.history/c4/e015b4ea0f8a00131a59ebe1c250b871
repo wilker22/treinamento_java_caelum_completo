@@ -1,0 +1,21 @@
+package br.com.caelum.fj11.programa;
+
+import br.com.caelum.fj11.modelo.BarraDeProgresso;
+import br.com.caelum.fj11.modelo.Conta;
+import br.com.caelum.fj11.modelo.CopiadorDeArquivos;
+
+public class TestaConcorrencia {
+	public static void main(String[] args) {
+//		BarraDeProgresso barraDeProgresso = new BarraDeProgresso();
+//		Thread t1 = new Thread(barraDeProgresso);
+//		t1.start();
+//		
+//		CopiadorDeArquivos copiador = new CopiadorDeArquivos();
+//		Thread t2 = new Thread(copiador);
+//		t2.start();
+		
+		Conta conta = new Conta(500.0);
+		FazDeposito acao = new FazDeposito(conta);
+		Thread t1 = new Thread(acao);
+	}
+}

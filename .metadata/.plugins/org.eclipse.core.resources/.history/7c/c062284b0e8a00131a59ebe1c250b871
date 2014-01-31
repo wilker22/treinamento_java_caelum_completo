@@ -1,0 +1,13 @@
+package br.com.caelum.fj11.programa;
+
+import br.com.caelum.fj11.modelo.BarraDeProgresso;
+
+public class TestaConcorrencia {
+	public static void main(String[] args) {
+		BarraDeProgresso barraDeProgresso = new BarraDeProgresso();
+		barraDeProgresso.executa();
+		
+		CopiadorDeArquivos copiador = new CopiadorDeArquivos();
+		copiador.executa();
+	}
+}
