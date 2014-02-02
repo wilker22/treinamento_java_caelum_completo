@@ -1,0 +1,8 @@
+package br.com.caelum.jdbc;
+
+public class GerenciadorDeConexoes {
+	private static Connection getConnection(String tipo, String servidor, String nome, String user, 
+			String passowrd) {
+		return null;
+	}
+}
